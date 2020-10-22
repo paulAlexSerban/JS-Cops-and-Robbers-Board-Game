@@ -1,0 +1,26 @@
+@import 'variables.scss';
+
+$weapons: (
+  multitool-knife,
+  baton,
+  gun,
+  rifle
+);
+
+@mixin backgroundImage($name) {
+    $url: './../../assets/images/#{$name}.png';
+    background-image: url($url);
+    @include bkgImage();
+  }
+
+@mixin weaponsClasses {
+    @each $name in $weapons{
+      &__#{$name} {
+        @include backgroundImage(#{$name});
+      }
+    }
+  }
+  
+.weapons {
+    @include weaponsClasses;
+}

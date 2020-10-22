@@ -1,0 +1,12 @@
+@import 'variables';
+
+.main {
+    width: 90vw;
+    max-width: 800px;
+
+    &__base {
+        width: 99.99%;
+        margin: auto;
+        height: 99.99%;
+    }
+}
